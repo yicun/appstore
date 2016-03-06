@@ -1,4 +1,4 @@
-package me.chyc.appstore;
+package me.chyc.linkedin.appstore;
 
 public class Test {
     public static void main(String args[]) {

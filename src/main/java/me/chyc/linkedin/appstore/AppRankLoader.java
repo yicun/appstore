@@ -1,7 +1,7 @@
-package me.chyc.appstore;
+package me.chyc.linkedin.appstore;
 
-import me.chyc.http.WebPageGetter;
-import me.chyc.utils.StringUtils;
+import me.chyc.linkedin.http.WebPageGetter;
+import me.chyc.linkedin.utils.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -13,7 +13,7 @@ import org.jsoup.select.Elements;
 public class AppRankLoader {
     public static void main(String args[]) throws Exception {
         String url = "http://www.apple.com/cn/itunes/charts/paid-apps/";
-        String html = WebPageGetter.getWebPage(url,"utf-8");
+        String html = WebPageGetter.getWebPage(url, "utf-8");
         Document document = Jsoup.parse(html);
         Element section = document.getElementsByTag("section").first();
         Elements elements = section.getElementsByTag("li");
